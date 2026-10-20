@@ -29,7 +29,8 @@
           ];
 
           shellHook = ''
-            DOTNET_ROOT="${dotnet}"
+            export DOTNET_ROOT="${dotnet}"
+            export PATH="${dotnet}/bin:$PATH"
           '';
         };
       }
